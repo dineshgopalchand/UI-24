@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
     template:`
     <div>this is course component</div>
     <ul>
-        <li *ngFor="let course of courseList">{{course}}</li>
+        <li *ngFor="let course of shortedCourseList">{{course}}</li>
     </ul>
     `
 })
@@ -18,4 +18,9 @@ export class CourseComponent{
         'Javascript',
         'Python'
     ]
+
+    get shortedCourseList(){
+        return this.courseList.sort();
+    }
+
 }

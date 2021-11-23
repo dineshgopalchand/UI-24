@@ -1,0 +1,10 @@
+<h2>{{title}} ({{courseList.length}}):-</h2>
+<button (click)="addNewCourse()"> Add new Course</button>
+<hr>
+<div class="content">
+    <ul>
+        <li *ngFor="let course of courseList">
+            {{course}}
+        </li>
+    </ul>
+</div>
