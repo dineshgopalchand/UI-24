@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { CourseService } from "./course.service";
+import { CoursesService } from "./service/courses.service";
 
 @Component({
     selector: 'app-course',
@@ -13,7 +13,7 @@ import { CourseService } from "./course.service";
 })
 export class CourseComponent {
     courseList: string[] = [];
-    constructor(public courseService: CourseService) {
+    constructor(public courseService: CoursesService) {
         this.courseList = this.courseService.courseList;
     }
     get shortedCourseList() {
