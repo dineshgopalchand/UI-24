@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'app-courses',
@@ -7,23 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit {
   title = 'Courses List';
-  courseList = [
-    'Angular',
-    'HTML',
-    'CSS',
-    'Javascript',
-    'Python'
-  ]
+  courseList :string[]= [];
 
-  constructor() {
+  constructor(private courseService:CourseService) {
     console.log('this will get excuted at the time of object creatation');
   }
 
   ngOnInit(): void {
+    this.courseList=this.courseService.courseList;
     console.log('this code will get excuted once, after new object create');
   }
   addNewCourse() {
-    this.courseList.push('course-' + (this.courseList.length+1))
+    this.courseService.addNewCourse();
   }
 
 }
