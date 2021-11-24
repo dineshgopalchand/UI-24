@@ -9,8 +9,17 @@
 <!-- <button class="btn {{error?'btn-danger':'btn-primary'}}">{{error?'Cancel':'Save'}}
 </button> -->
 
-<button class="btn" [class.btn-danger]="error"
-    [class.btn-primary]="!error">{{error?'Cancel':'Save'}}
+<button class="btn" [class.btn-danger]="error" [class.btn-primary]="!error">{{error?'Cancel':'Save'}}
 </button>
 
 <!-- ngClass directive -->
+
+
+<!-- <p style="background-color: rgb(240, 197, 197);">{{error?errorMessage:successMessage}}</p>
+<p style="background-color: rgb(198, 250, 174);">{{error?errorMessage:successMessage}}</p> -->
+
+<!-- <p style="background-color: {{error?'rgb(240, 197, 197);':'rgb(198, 250, 174);'}}">{{error?errorMessage:successMessage}}
+</p> -->
+
+<p [style.backgroundColor]=" error?'rgb(240, 197, 197)':'rgb(198, 250, 174)'">{{error?errorMessage:successMessage}}
+</p>

@@ -9,6 +9,8 @@ export class ClassStyleBindingComponent implements OnInit {
 
 
   error = true;
+  errorMessage="There is some problem. Please check it once again";
+  successMessage="Waooo.. Everything is looking good";
   constructor() { }
 
   ngOnInit(): void {
