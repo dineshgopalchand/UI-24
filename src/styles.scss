@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('~bootstrap/dist/css/bootstrap.min.css');
+// @import url('~bootstrap/dist/css/bootstrap.min.css');
 
 .container {
     width: 900px;
@@ -8,3 +8,5 @@
 .center{
     text-align: center;
 }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
