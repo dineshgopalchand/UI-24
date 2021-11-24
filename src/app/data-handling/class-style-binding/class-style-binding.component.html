@@ -6,11 +6,11 @@
     <button class="btn btn-primary" (click)="changeStatus()">Switch Status</button>
 </div>
 
-<!-- <button class="btn {{formValidationError?'btn-danger':'btn-primary'}}">{{formValidationError?'Cancel':'Save'}}
+<!-- <button class="btn {{error?'btn-danger':'btn-primary'}}">{{error?'Cancel':'Save'}}
 </button> -->
 
-<button class="btn" [class.btn-danger]="formValidationError"
-    [class.btn-primary]="!formValidationError">{{formValidationError?'Cancel':'Save'}}
+<button class="btn" [class.btn-danger]="error"
+    [class.btn-primary]="!error">{{error?'Cancel':'Save'}}
 </button>
 
 <!-- ngClass directive -->

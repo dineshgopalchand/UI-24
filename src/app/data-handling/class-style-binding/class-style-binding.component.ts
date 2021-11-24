@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ClassStyleBindingComponent implements OnInit {
 
 
-  formValidationError = true;
+  error = true;
   constructor() { }
 
   ngOnInit(): void {
   }
   changeStatus() {
-    this.formValidationError = !this.formValidationError;
+    this.error = !this.error;
   }
 
 }
