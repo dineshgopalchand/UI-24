@@ -1,0 +1,18 @@
+<h3>{{title}}</h3> <!-- String Interpolation-->
+<p>{{description}}</p> <!-- String Interpolation-->
+
+<!-- prperties binding -->
+<p [innerHTML]="description"></p>
+<p [innerHTML]="descriptionBold"></p>
+<p [innerText]="description"></p>
+<p [innerText]="descriptionBold"></p>
+<p [textContent]="description"></p>
+<p [textContent]="descriptionBold"></p>
+<p [textContent]="descriptionBold"></p>
+<p [textContent]="'some static text'"></p>
+<p [textContent]='"some static text"'></p>
+<!-- <p>some static text</p> -->
+
+<p title="{{title +' '+ 1}}">{{title}} 1</p>
+<p [title]="title ">{{title}}</p>
+<p [title]="title + ' '+2">{{title}} 2</p>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CourseComponent } from './course.component';
 import { CourseService } from './course.service';
 import { CoursesComponent } from './courses/courses.component';
+import { DataHandlingModule } from './data-handling/data-handling.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CoursesComponent } from './courses/courses.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DataHandlingModule
   ],
   providers: [
     CourseService
