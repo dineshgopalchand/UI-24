@@ -2,7 +2,7 @@
 <p>{{description}}</p> <!-- String Interpolation-->
 
 <!-- prperties binding -->
-<p [innerHTML]="description"></p>
+<!-- <p [innerHTML]="description"></p>
 <p [innerHTML]="descriptionBold"></p>
 <p [innerText]="description"></p>
 <p [innerText]="descriptionBold"></p>
@@ -10,9 +10,45 @@
 <p [textContent]="descriptionBold"></p>
 <p [textContent]="descriptionBold"></p>
 <p [textContent]="'some static text'"></p>
-<p [textContent]='"some static text"'></p>
+<p [textContent]='"some static text"'></p> -->
 <!-- <p>some static text</p> -->
 
-<p title="{{title +' '+ 1}}">{{title}} 1</p>
+<!-- <p title="{{title +' '+ 1}}">{{title}} 1</p>
 <p [title]="title ">{{title}}</p>
-<p [title]="title + ' '+2">{{title}} 2</p>
+<p [title]="title + ' '+2">{{title}} 2</p> -->
+
+<!-- <img src="../../../assets/images/AngularJS-Shield.svg" alt="AngularJS-Shield"> -->
+<!-- <img [src]="imgSrc"  [alt]="imgAlt"> -->
+
+<!-- Attribute binding  -->
+<!-- <img [src]="imgSrc" [attr.some-alt-value]="imgAlt" [alt]="imgAlt"> -->
+
+<table>
+    <tr>
+        <td [attr.colspan]="colSpan">Lorem.</td>
+        <!-- <td>Aut.</td> -->
+        <td>Eius!</td>
+        <td>Nostrum.</td>
+    </tr>
+    <tr>
+        <td [attr.rowspan]="rowSpan">Lorem.</td>
+        <td>Ut.</td>
+        <td>Ex.</td>
+        <td>Veniam.</td>
+    </tr>
+    <tr>
+        <!-- <td>Lorem.</td> -->
+        <td>Aperiam!</td>
+        <td>Veniam?</td>
+        <td>Voluptatum!</td>
+    </tr>
+    <tr>
+        <!-- <td>Lorem.</td> -->
+        <td>Corrupti.</td>
+        <td>Illum?</td>
+        <td>Vel.</td>
+    </tr>
+</table>
+
+
+

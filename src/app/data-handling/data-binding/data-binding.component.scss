@@ -1,0 +1,16 @@
+// table{
+//     border-collapse: collapse;
+//     min-width: 80%;
+//     margin: auto;
+// }
+// table, tr, td {
+//     border: 1px solid gray;
+// }
+table{
+    border-collapse: collapse;
+    min-width: 80%;
+    margin: auto;
+    &,tr, td {
+        border: 1px solid gray;
+    }
+}
