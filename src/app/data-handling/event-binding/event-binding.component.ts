@@ -13,12 +13,21 @@ export class EventBindingComponent implements OnInit {
   ngOnInit(): void {
   }
   buttonClick(e: MouseEvent) {
+    e.stopPropagation();
     console.log('button click');
     console.log(e);
   }
-  inputFieldEvent(e: KeyboardEvent) {
+  parentContainerClicked(e: MouseEvent) {
+    console.log('Parent Element click');
     console.log(e);
-    // console.log((e.target as HTMLInputElement).value); // to get the value of input element
   }
+  childContainerClicked(e: MouseEvent) {
+    console.log('child Element click');
+    console.log(e);
+  }
+  // inputFieldEvent(e: KeyboardEvent) {
+  //   console.log(e);
+  //   // console.log((e.target as HTMLInputElement).value); // to get the value of input element
+  // }
 
 }
