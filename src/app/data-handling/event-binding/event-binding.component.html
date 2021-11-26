@@ -1,12 +1,25 @@
 <h3>{{title}}</h3>
 <hr>
 
-<div class="parent-container" (click)="parentContainerClicked($event)">
+<!-- <div class="parent-container" (click)="parentContainerClicked($event)">
     <div class="child-container" (click)="childContainerClicked($event)">
-        <!-- <button class="btn btn-primary m-2" onclick="buttonClick(event)">Button</button> -->
         <button class="btn btn-primary m-2" (click)="buttonClick($event)">Button</button>
     </div>
-</div>
-<!-- <div class="form-group">
-    <input type="text" class="form-control" name="name" placeholder="Enter your name"  (keyup)="inputFieldEvent($event)">
 </div> -->
+<div class="row">
+    <div class="col">
+        <div class="form-group">
+            <!-- <input type="text" class="form-control" name="name" placeholder="Enter your name"
+                (keyup)="inputFieldEvent($event)"> -->
+            <input type="text" class="form-control" name="name" placeholder="Enter your name"
+            #fname
+                (keyup.enter)="intputFieldSubmitted(fname)">
+        </div>
+    </div>
+
+    <!-- To add Template reference variable , we are using #<template-reference-variable-name> e.g. #fname -->
+
+    <div class="col-4">
+        <button class="btn btn-primary" (click)="intputFieldSubmitted(fname)">Submit</button>
+    </div>
+</div>
