@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventBindingComponent implements OnInit {
 
+  title = "Event Binding";
   constructor() { }
 
   ngOnInit(): void {
+  }
+  buttonClick(e: MouseEvent) {
+    console.log('button click');
+    console.log(e);
+  }
+  inputFieldEvent(e: KeyboardEvent) {
+    console.log(e);
+    // console.log((e.target as HTMLInputElement).value); // to get the value of input element
   }
 
 }
