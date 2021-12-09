@@ -5,6 +5,7 @@ import { ClassStyleBindingComponent } from './class-style-binding/class-style-bi
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { DataHandlingComponent } from './data-handling.component';
 import { FormsModule } from '@angular/forms';
+import { PipeComponent } from './pipe/pipe.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { FormsModule } from '@angular/forms';
     DataBindingComponent,
     ClassStyleBindingComponent,
     EventBindingComponent,
-    DataHandlingComponent
+    DataHandlingComponent,
+    PipeComponent
   ],
   imports: [
     CommonModule,
