@@ -1,29 +1,19 @@
 <h3>{{title}}</h3>
 <hr>
 
-<!-- <div class="parent-container" (click)="parentContainerClicked($event)">
-    <div class="child-container" (click)="childContainerClicked($event)">
-        <button class="btn btn-primary m-2" (click)="buttonClick($event)">Button</button>
-    </div>
-</div> -->
 <div class="row">
     <div class="col">
         <div class="form-group">
-            <!-- <input type="text" class="form-control" name="name" placeholder="Enter your name"
-                (keyup)="inputFieldEvent($event)"> -->
-            <input type="text" class="form-control" name="name" placeholder="Enter your name" [value]="nameVal"
-            #fname
-                (keyup.enter)="intputFieldSubmitted(fname)" 
-                (keyup)="updateValue(fname)">
-                <!-- (keyup)="nameVal=fname.value"> -->
+            <input type="text" class="form-control" name="name" placeholder="Enter your name" [(ngModel)]="nameVal"
+                (keyup.enter)="intputFieldSubmitted()">
+
         </div>
     </div>
 
-    <!-- To add Template reference variable , we are using #<template-reference-variable-name> e.g. #fname -->
 
     <div class="col-4">
-        <button class="btn btn-primary" (click)="intputFieldSubmitted(fname)">Submit</button>
+        <button class="btn btn-primary" (click)="intputFieldSubmitted()">Submit</button>
     </div>
 
 </div>
-name: {{fname.value}}
+name: {{nameVal}}
