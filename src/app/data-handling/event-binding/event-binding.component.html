@@ -11,9 +11,11 @@
         <div class="form-group">
             <!-- <input type="text" class="form-control" name="name" placeholder="Enter your name"
                 (keyup)="inputFieldEvent($event)"> -->
-            <input type="text" class="form-control" name="name" placeholder="Enter your name"
+            <input type="text" class="form-control" name="name" placeholder="Enter your name" [value]="nameVal"
             #fname
-                (keyup.enter)="intputFieldSubmitted(fname)">
+                (keyup.enter)="intputFieldSubmitted(fname)" 
+                (keyup)="updateValue(fname)">
+                <!-- (keyup)="nameVal=fname.value"> -->
         </div>
     </div>
 
@@ -22,4 +24,6 @@
     <div class="col-4">
         <button class="btn btn-primary" (click)="intputFieldSubmitted(fname)">Submit</button>
     </div>
+
 </div>
+name: {{fname.value}}

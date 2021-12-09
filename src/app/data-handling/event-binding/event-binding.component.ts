@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class EventBindingComponent implements OnInit {
 
   title = "Event Binding";
+
+  nameVal = 'Dinesh';
   constructor() { }
 
   ngOnInit(): void {
@@ -32,12 +34,15 @@ export class EventBindingComponent implements OnInit {
 
   //     console.log((e.target as HTMLInputElement).value); // to get the value of input element
   //   }
-  intputFieldSubmitted(e:HTMLInputElement) {
+  intputFieldSubmitted(e: HTMLInputElement) {
     console.log(e.value);
     // if (e.keyCode === 13) {
-      // console.log((e.target as HTMLInputElement).value); // to get the value of input element
+    // console.log((e.target as HTMLInputElement).value); // to get the value of input element
 
 
   }
 
+  updateValue(input:HTMLInputElement){
+    this.nameVal=input.value
+  }
 }
