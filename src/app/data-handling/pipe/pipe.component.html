@@ -1,7 +1,42 @@
-<h4 >{{headerVal}}</h4>
+<!-- <h4 >{{headerVal}}</h4>
 <h4 >{{headerVal | uppercase}}</h4>
 <h4 >{{headerVal | lowercase}}</h4>
-<h4 >{{headerVal | titlecase}}</h4>
+<h4 >{{headerVal | titlecase}}</h4> -->
 <h4 [textContent]="headerVal | titlecase"></h4>
 
 <!-- <button (click)="changeHeader()">Change Header</button> -->
+
+<!-- <p>{{course}}</p> -->
+<!-- <p>{{stringfyObject(course)}}</p> -->
+
+<p>{{course | json}}</p>
+<p>{{course.title | uppercase }}</p>
+<p>{{course.title | lowercase}}</p>
+<p>{{course.title | titlecase}}</p>
+<p>{{course.rating | number }}</p>
+<p>{{course.rating | number:'0.1-2' }}</p>
+<p>{{course.rating1 | number:'0.1-2' }}</p>
+<p>{{course.rating1 | number:'3.1-2' }}</p>
+<p>{{course.rating1 | number:'3.0' }}</p>
+<p>{{course.rating | number:'0.1-1' }}</p>
+<p>{{course.students | number }}</p>
+<p>{{course.price | currency}}</p>
+<p>{{course.price | currency:'INR'}}</p>
+<p>{{course.price | currency:'EUR'}}</p>
+<p>{{course.price | currency:'KD'}}</p>
+<p>{{course.price | currency:defaultCurrencyType}}..</p>
+<p>{{course.price | currency:'AUD'}}</p>
+<p>{{course.releaseDate | date}}</p>
+<p>{{course.releaseDate | date:'long'}}</p>
+<p>{{course.releaseDate | date: 'full'}}</p>
+<p>{{course.releaseDate | date:'shortDate'}}</p>
+<p>{{course.releaseDate | date:'MMM d'}}</p>
+<p>{{course.releaseDate | date}}</p>
+
+<p>{{course | keyvalue | json}}</p>
+<table>
+    <tr *ngFor="let item of course | keyvalue">
+        <td>{{item.key}}</td>
+        <td>{{item.value}}</td>
+    </tr>
+</table>
